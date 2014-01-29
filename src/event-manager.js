@@ -1,4 +1,4 @@
-( function( window, undefined ) {
+( function( namespace ) {
 	"use strict";
 
 	/**
@@ -232,8 +232,7 @@
 		return MethodsAvailable;
 
 	};
-	
-	window.wp = window.wp || {};
-	window.wp.hooks = new EventManager();
+	namespace = namespace || {};
+	namespace.hooks = new EventManager();
 
-} )( window );
+} )( window.wp );
